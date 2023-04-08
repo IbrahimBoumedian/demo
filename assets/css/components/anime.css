@@ -1,0 +1,35 @@
+/* Main Heading style h1 for animation (anime.js) */
+.ml12 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+/* Secondary Heading h2 style  for animation (anime.js) */
+.ml1 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--first-color);
+  transform-origin: 0 0;
+}
+
+.ml1 .line1 {
+  top: -10px;
+}
+.ml1 .line2 {
+  bottom: -10px;
+}

@@ -1,0 +1,53 @@
+.profile-picture {
+  position: relative;
+  max-width: 100%;
+  /* border: var(--profile-border) !important; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 0.2rem;
+  border-radius: 50%;
+  z-index: -1;
+  border: 5px solid var(--title-color);
+}
+.bio-img::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  inset: 0;
+  scale: 1.05;
+  border-radius: 50%;
+  border: 3px dotted var(--first-color);
+  animation: border-1 7s 0.2s ease-in-out infinite alternate;
+}
+.bio-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  inset: 0;
+  scale: 1.15;
+  border-radius: 50%;
+  border: 3px dotted var(--title-color);
+  animation: border-2 7s 0.2s ease-in-out infinite alternate;
+  z-index: -2;
+}
+
+@keyframes border-1 {
+  0% {
+    /* transform: rotate(360deg); */
+  }
+  100% {
+    transform: rotate(150deg);
+  }
+}
+@keyframes border-2 {
+  0% {
+    /* transform: rotate(360deg); */
+  }
+  100% {
+    transform: rotate(-150deg);
+    box-shadow: 20px 20px 30px rgba(111, 228, 173, 0.086);
+  }
+}

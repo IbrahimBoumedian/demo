@@ -1,0 +1,98 @@
+/*=============== HEADER & NAV ===============*/
+.header {
+  position: sticky;
+  top: 0;
+  background: var(--header-bg);
+  z-index: var(--z-header);
+  transition: 0.3s ease-in-out;
+  border-bottom: var(--header-border);
+  backdrop-filter: blur(22px) !important;
+}
+
+.header.sticky .tw-container {
+  padding-block: 6px !important;
+}
+.header.header.sticky .logo img {
+  scale: 1.7 !important;
+}
+
+.header > .tw-container {
+  min-height: var(--header-height);
+  padding-block: 12px;
+  transition: 0.2s ease-in-out;
+}
+/* LOGO */
+.logo img {
+  height: 50px;
+  scale: 2.15;
+  cursor: pointer;
+  margin-left: 15px;
+
+  transition: 0.1s ease-in-out;
+}
+.logo img:hover {
+  /* scale: 0.95; */
+  filter: blur(0.3px) brightness(150%);
+  transform: scale(0.98);
+}
+
+.nav-link {
+  color: var(--nav-link-color);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 80px;
+  text-align: center;
+  letter-spacing: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  /* From https://css.glass */
+  background: linear-gradient(134.01deg, #3bf686 40.75%, #4ca9ff 90.52%);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  outline: 2px solid black;
+  padding: 5px 10px;
+  border-radius: 50px;
+  -moz-outline-radius: 50px;
+  font-weight: bolder;
+  border: 2px solid white;
+  text-shadow: 1px 1px rgb(0 0 0 /10%);
+  color: black !important;
+}
+
+@media (max-width: 976px) {
+  .header .header-icons,
+  .header nav ul {
+    display: none;
+  }
+  .header-icons-responsive {
+    display: block !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    min-height: 40px;
+    width: 100%;
+    padding-block: 10px;
+
+    background: var(--header-bg);
+    z-index: var(--z-header);
+    transition: 0.3s ease-in-out;
+    border-top: var(--header-border);
+    backdrop-filter: blur(15px) !important;
+  }
+  .header-icons-responsive > ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: center !important;
+  }
+  .header-icons-responsive > ul .ib-comp-icon {
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,132 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 30px;
+
+  /*========== Colors ==========*/
+  --first-color: #3bf686;
+  --title-color: #ffffff;
+  --text-color: #d4d4d4;
+  --body-bg: linear-gradient(to right, #1f1f1f 0%, rgb(26, 26, 26) 100%);
+  /*========== HEADER Colors ==========*/
+  --header-bg: rgba(28, 28, 28, 0.5);
+  --header-border: 1px solid #4d4d4d;
+  /* Nav */
+  --nav-link-color: white;
+  --menu-icon-color: white;
+  /* Nav Icons */
+  --nav-icon-bg: rgb(32, 32, 32);
+  --nav-icon-border: rgba(210, 210, 210, 0.291);
+  --nav-icon-hover: rgb(56, 56, 56);
+  /* HOME */
+  --profile-border: 5px solid rgba(255, 255, 255, 0.685);
+  --h1-bg:linear-gradient(to bottom ,  #3BF686 40.75%, rgb(50, 212, 155) 90.52%) ; 
+  /*========== Font and typography ==========*/
+  --body-font: "Sora", sans-serif;
+  --title-font: "Sora", sans-serif;
+  --biggest-font-size: 1.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+  --tiny-font-size: 0.625rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  /*========== z index ==========*/
+  --z-menu: 30;
+  --z-header: 20;
+}
+
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+body.light-theme {
+  --first-color: #3bf686;
+  --title-color: #000000;
+  --text-color: #2a2a2a;
+  --body-bg: linear-gradient(to right, #e8fff1 0%, #f6f6f6 100%);
+  --container-color: hsl(207, 4%, 95%);
+  /*========== HEADER  ==========*/
+  --header-border: 1px solid #e1e1e1;
+  --header-bg: rgba(246, 246, 246, 0.764);
+  /* Nav */
+  --nav-link-color: #262626;
+  --menu-icon-color: rgb(10, 10, 10);
+
+  /* Nav Icons */
+  --nav-icon-bg: rgb(255, 255, 255);
+  --nav-icon-border: rgba(210, 210, 210, 0.718);
+  --nav-icon-hover: rgb(241, 241, 241);
+
+  /* HOME */
+  --profile-border: 5px solid #3bf6868f;
+  --h1-bg:black
+   ; 
+
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font) !important;
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background 0.3s; /* for dark mode animation */
+  min-height: 4000px;
+  background: var(--body-bg) !important;
+  /* Change PosItion of body bg */
+  animation: bodyBg 1s 0.1s infinite alternate;
+}
+@keyframes bodyBg {
+  0% {
+    background-position: center;
+  }
+  50% {
+    background-position: -600px -250px;
+  }
+  100% {
+    background-position: 600px 250px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--title-color);
+  font-family: var(--title-font);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/*=============== HOME ===============*/

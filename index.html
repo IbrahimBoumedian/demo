@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FAVICON ===============-->
+    <link rel="SHORTCUT ICON" href="assets/img/Site-Identity/FAV-ICON.png" />
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="dist/output.css" />
+    <!--=============== CSS COMPONENTS ===============-->
+    <link rel="stylesheet" href="assets/css/components/header.css" />
+    <link rel="stylesheet" href="assets/css/components/icons.css" />
+    <link rel="stylesheet" href="assets/css/components/anime.css" />
+    <link rel="stylesheet" href="assets/css/components/classes.css" />
+    <!--=============== CSS SECTIONS ===============-->
+    <link rel="stylesheet" href="assets/css/sections/hero.css" />
+    <!--=============== SEO ===============-->
+    <title>Ibra - Front-End Developer</title>
+    <meta
+      name="description"
+      content="As a front-end developer, I specialize in creating visually appealing and responsive websites that are optimized for the best user experience. Browse my portfolio and discover how I can help bring your ideas to life."
+    />
+
+    <!--=============== ANIME.JS ===============-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  </head>
+
+  <body class="">
+    <!--==================== LOADER ====================-->
+
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <div class="tw-container">
+        <div class="header-box flex justify-between items-center">
+          <!-- LOGO -->
+          <a href="index.html" class="logo">
+            <img
+              src="assets/img/Site-Identity/LOGO.png"
+              alt="Ibrahim Boumedian"
+            />
+          </a>
+          <!-- NAV  -->
+          <nav>
+            <ul class="flex items-center gap-3">
+              <li><a class="nav-link active" href="#">Home</a></li>
+              <li><a class="nav-link" href="#">About</a></li>
+              <li><a class="nav-link" href="#">Services</a></li>
+              <li><a class="nav-link" href="#">Portfolio</a></li>
+              <li><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <!-- HEADER ICONS -->
+          <div class="header-icons">
+            <ul class="flex gap-3">
+              <li class="header-icon toggle-theme ib-comp-icon">
+                <ion-icon
+                  class="toggle-theme-icon"
+                  name="sunny-outline"
+                ></ion-icon>
+              </li>
+              <li class="header-icon ib-comp-icon">
+                <a
+                  target="_blank"
+                  href="https://github.com/IbrahimBoumedian"
+                  class="flex items-center justify-center"
+                >
+                  <ion-icon name="logo-github"></ion-icon>
+                </a>
+              </li>
+              <li class="header-icon ib-comp-icon">
+                <a href="#" class="flex items-center justify-center">
+                  <ion-icon name="mail-outline"></ion-icon>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- MENU-TOGGLE RESPONSIVE -->
+          <div id="burger-menu" class="burger-menu menu-toggle flex lg:hidden">
+            <span></span>
+          </div>
+          <style>
+            .burger-menu {
+              cursor: pointer;
+              height: 27px;
+              width: 27px;
+
+              overflow: visible;
+              position: relative;
+              z-index: 2;
+            }
+            .burger-menu span,
+            .burger-menu span:before,
+            .burger-menu span:after {
+              background: var(--menu-icon-color);
+              display: block;
+              height: 1.2px;
+              opacity: 1;
+              position: absolute;
+              transition: 0.2s ease-in-out;
+            }
+            .burger-menu span:before,
+            .burger-menu span:after {
+              content: "";
+            }
+            .burger-menu span {
+              right: 0px;
+              top: 13px;
+              width: 30px;
+            }
+            .burger-menu span:before {
+              right: 0px;
+              top: -10px;
+              width: 16px;
+            }
+            .burger-menu span:after {
+              right: 0px;
+              top: 10px;
+              width: 20px;
+            }
+
+            .burger-menu.close span {
+              transform: rotate(-45deg);
+              top: 13px;
+              width: 27px;
+            }
+            .burger-menu.close span:before {
+              top: 0px;
+              transform: rotate(90deg);
+              width: 27px;
+            }
+            .burger-menu.close span:after {
+              top: 0px;
+              left: 0;
+              transform: rotate(90deg);
+              opacity: 0;
+              width: 0;
+            }
+          </style>
+          <script>
+            var burgerMenu = document.getElementById("burger-menu");
+            var overlay = document.getElementById("menu");
+            burgerMenu.addEventListener("click", function () {
+              this.classList.toggle("close");
+              overlay.classList.toggle("overlay");
+            });
+          </script>
+        </div>
+      </div>
+    </header>
+    <!-- MOBILE HEADER ICONS  -->
+    <div class="hidden header-icons-responsive">
+      <ul class="flex gap-3">
+        <li class="header-icon toggle-theme ib-comp-icon">
+          <ion-icon class="toggle-theme-icon" name="sunny-outline"></ion-icon>
+        </li>
+        <li class="header-icon ib-comp-icon">
+          <a href="#" class="flex items-center justify-center">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </li>
+
+        <li class="header-icon ib-comp-icon">
+          <a href="#" class="flex items-center justify-center">
+            <ion-icon name="mail-outline"></ion-icon>
+          </a>
+        </li>
+        <li class="header-icon ib-comp-icon">
+          <div id="burger-menu" class="burger-menu menu-toggle scale-75">
+            <span></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <!-- MOBILE RESPONSIVE -->
+      <section class="sec-hero-mobile md:hidden overflow-hidden" id="home">
+        <div class="tw-container min-h-[60vh] flex items-center">
+          <div
+            class="hero-text-mobile max-w-[450px] pt-20 pb-10 flex flex-col gap-4 justify-center items-center"
+          >
+            <h1 class="ml12">
+              Hi Im Ibrahim Boumedian, Passionate Front-End Developer Crafting
+              Engaging Web Experiences
+            </h1>
+            <p class="max-w-[540px] basis-9/12">
+              Ibrahim Boumedian is a talented and creative front-end developer
+              with 2 years of experience in the industry. With a passion for
+              designing and developing high-quality user interfaces and
+              interactive experiences
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- DESKTOP -->
+      <section class="sec-hero hidden md:block overflow-hidden" id="home">
+        <div class="tw-container min-h-[75vh] flex items-center">
+          <div class="hero-container max-w-my-container py-20">
+            <h1 class="ml12">
+              Hi Im Ibrahim Boumedian, Passionate Front-End Developer Crafting
+              Engaging Web Experiences
+            </h1>
+
+            <div class="hero-bio mt-16">
+              <div
+                class="hero-bio-layout flex flex-wrap justify-between items-center"
+              >
+                <!-- BIO IMG -->
+                <div
+                  class="bio-img relative basis-full md:basis-4/12 !lg:basis-4/12"
+                >
+                  <img
+                    class="profile-picture"
+                    src="assets/img/Hero/profile-pic-2.png"
+                    alt="Ibrahim Boumedian"
+                  />
+                </div>
+                <!-- BIO CONTENT -->
+                <div
+                  class="bio-text-content basis-full md:basis-7/12 lg:basis-7/12"
+                >
+                  <h2 class="ml1 mb-5">
+                    <span class="text-wrapper">
+                      <span class="line line1"></span>
+                      <span class="letters">Biography</span>
+                      <span class="line line2"></span>
+                    </span>
+                  </h2>
+
+                  <p class="max-w-[700px] mt-2" style="font-weight: 300">
+                    Ibrahim Boumedian is a talented and creative front-end
+                    developer with 2 years of experience in the industry. With a
+                    passion for designing and developing high-quality user
+                    interfaces and interactive experiences
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--==================== SKILLS ====================-->
+      <section class="skills section" id="skills"></section>
+
+      <!--==================== QUALIFICATION ====================-->
+      <section class="sec-qualification" id="qualification"></section>
+
+      <!--==================== SERVICES ====================-->
+      <section class="sec-services" id="services"></section>
+
+      <!--==================== PROJECTS ====================-->
+      <section class="sec-projects" id="projects"></section>
+
+      <!--==================== TESTIMONIAL ====================-->
+      <section class="sec-testimonial"></section>
+
+      <!--==================== CONTACT ====================-->
+      <section class="sec-contact" id="contact"></section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer"></footer>
+
+    <!--========== SCROLL UP ==========-->
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src=""></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src=""></script>
+
+    <!--=============== EMAIL JS ===============-->
+
+    <!--=============== MAIN JS ===============-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/anime.js"></script>
+
+    <!--=============== Ionicons Installation ===============-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

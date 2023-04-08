@@ -1,0 +1,11 @@
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+/*=============== HOME ===============*/
+h1 .letter {
+  background: var(--h1-bg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+}
